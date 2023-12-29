@@ -42,24 +42,24 @@ const actionDummyData = [
     id: 1,
     detectionDate: "2022-02-02 21:06:54 ~ 2022-02-02 21:34:39",
     location: "NI건설 가산 광진 현장",
-    detectionText: "기물파손",
+    detectionText: "안전모 미착용",
     actionDate: "2022-02-02 22:11:05",
     checker: "송영진",
     actionPerson: "김진명",
     violator: "박만식",
-    resultAction: "제품 파손으로 인한 고객 클레임 사례 기록과 해당 제품에 대한 보상 및 대응",
+    resultAction: "안전모 미착용 사례를 점검하여 해당 작업자와 더 넓은 작업자 집단에게 안전모 착용 규정을 재확인하고, 안전 교육을 강화하였습니다.",
     detailView: "상세",
   },
   {
     id: 2,
     detectionDate: "2022-03-02 17:32:27 ~ 2022-03-02 17:38:21",
     location: "NI건설 남성 사당로 현장",
-    detectionText: "장시간 체류",
+    detectionText: "화재",
     actionDate: "2022-03-02 18:06:14",
     checker: "김성태",
     actionPerson: "안시만",
     violator: "남태만",
-    resultAction: "고객이 오래 앉을 수 없도록 의자 및 휴게 공간 재구성하여 고객 체류 시간 제한 조치 완료",
+    resultAction: "화재 발생 시 대피 절차를 준수하고 모든 작업자의 안전을 확인하였으며, 화재 진압 및 소화 작업을 신속하게 진행하였습니다.",
     detailView: "상세",
   },
   {
@@ -71,7 +71,7 @@ const actionDummyData = [
     checker: "송현진",
     actionPerson: "김민지",
     violator: "안수현",
-    resultAction: "저혈압 고객이 쓰러져서 즉시 119 응급 서비스를 호출 후 의료 지원 완료 ",
+    resultAction: "현장 인부 쓰러져서 즉시 119 응급 서비스를 호출한 후, 의료 지원이 도착하여 응급처치를 완료했습니다 ",
     detailView: "상세",
   },
   // {
@@ -345,7 +345,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
                 <div className="statistical__container">
 
                   <div className="statistical__list">
-                    <p className="statistical__list__name">기물파손</p>
+                    <p className="statistical__list__name">안정모 미착용</p>
                     <div className="statistical__list__progress">
                       <div className="statistical__list__progressBar" style={{ width: '60%' }}>
                         <div className="statistical__list__progressBar-style"></div>
@@ -359,7 +359,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
                     </div>
                   </div>
                   <div className="statistical__list fire">
-                    <p className="statistical__list__name">장시간 체류</p>
+                    <p className="statistical__list__name">화재</p>
                     <div className="statistical__list__progress">
                       <div className="statistical__list__progressBar" style={{ width: '17%' }}>
                         <div className="statistical__list__progressBar-style"></div>

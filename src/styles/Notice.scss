@@ -28,12 +28,12 @@
           border: 1px solid #6be2be;
           // border: 1px solid #e60012;
           path{
-            // color: #e60012;
+            color: #fff;
           }
         }
         svg{
           path{
-            color:#fff;
+            color:#121212;
           }
           font-size: 25px;
           transition: 0.2s;
@@ -141,7 +141,7 @@
         .pagination__button {
           border: 1px solid #bcbcbc;
           border-radius: 5.04px;
-          color: #2f2f2f;
+          color: #fff;
           font-family: "spoqaHanSansNeo400";
         }
         .pagination__button-active {
