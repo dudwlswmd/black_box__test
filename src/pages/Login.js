@@ -27,7 +27,8 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login">
       <div className="login__container">
-        <img className="login__logo" src={LogoHansung} alt="logoHansung" />
+        {/* <img className="login__logo" src={LogoHansung} alt="logoHansung" /> */}
+        <p className="logotxt">Ai Safety Black Box</p>
         <form className="login__input-box" onSubmit={handleSubmit}>
           <div className="input-box__id">
             <input
