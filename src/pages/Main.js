@@ -40,38 +40,38 @@ const notice_dummy = [
 const actionDummyData = [
   {
     id: 1,
-    detectionDate: "2022-02-02 21:06:54 ~ 2022-02-02 21:34:39",
+    detectionDate: "2023-11-02 21:06:54 ~ 2023-11-02 21:34:39",
     location: "NI건설 가산 광진 현장",
-    detectionText: "안전모 미착용",
-    actionDate: "2022-02-02 22:11:05",
+    detectionText: "기물파손",
+    actionDate: "2023-11-02 22:11:05",
     checker: "송영진",
     actionPerson: "김진명",
     violator: "박만식",
-    resultAction: "안전모 미착용 사례를 점검하여 해당 작업자와 더 넓은 작업자 집단에게 안전모 착용 규정을 재확인하고, 안전 교육을 강화하였습니다.",
+    resultAction: "제품 파손으로 인한 고객 클레임 사례 기록과 해당 제품에 대한 보상 및 대응",
     detailView: "상세",
   },
   {
     id: 2,
-    detectionDate: "2022-03-02 17:32:27 ~ 2022-03-02 17:38:21",
+    detectionDate: "2023-10-02 17:32:27 ~ 2023-10-02 17:38:21",
     location: "NI건설 남성 사당로 현장",
-    detectionText: "화재",
-    actionDate: "2022-03-02 18:06:14",
+    detectionText: "장시간 체류",
+    actionDate: "2023-10-02 18:06:14",
     checker: "김성태",
     actionPerson: "안시만",
     violator: "남태만",
-    resultAction: "화재 발생 시 대피 절차를 준수하고 모든 작업자의 안전을 확인하였으며, 화재 진압 및 소화 작업을 신속하게 진행하였습니다.",
+    resultAction: "고객이 오래 앉을 수 없도록 의자 및 휴게 공간 재구성하여 고객 체류 시간 제한 조치 완료",
     detailView: "상세",
   },
   {
     id: 3,
-    detectionDate: "2022-09-13 06:01:07 ~ 2022-09-13 06:39:15",
+    detectionDate: "2023-09-13 06:01:07 ~ 2023-09-13 06:39:15",
     location: "NI건설 사당 5동 현장",
     detectionText: "쓰러짐",
-    actionDate: "2022-09-13 07:00:43",
+    actionDate: "2023-09-13 07:00:43",
     checker: "송현진",
     actionPerson: "김민지",
     violator: "안수현",
-    resultAction: "현장 인부 쓰러져서 즉시 119 응급 서비스를 호출한 후, 의료 지원이 도착하여 응급처치를 완료했습니다 ",
+    resultAction: "저혈압 고객이 쓰러져서 즉시 119 응급 서비스를 호출 후 의료 지원 완료 ",
     detailView: "상세",
   },
   // {
@@ -220,7 +220,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
         <div className="main__container">
           <div className="main__left">
             <div className="main__warning">
-              <p className="warning__title">경고 알림현황</p>
+              <p className="warning__title">경고알림 현황</p>
               <div className="warning__container">
                 <div className="warning__textbox">
                   <div
@@ -345,7 +345,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
                 <div className="statistical__container">
 
                   <div className="statistical__list">
-                    <p className="statistical__list__name">안정모 미착용</p>
+                    <p className="statistical__list__name">기물파손</p>
                     <div className="statistical__list__progress">
                       <div className="statistical__list__progressBar" style={{ width: '60%' }}>
                         <div className="statistical__list__progressBar-style"></div>
@@ -359,7 +359,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
                     </div>
                   </div>
                   <div className="statistical__list fire">
-                    <p className="statistical__list__name">화재</p>
+                    <p className="statistical__list__name">장시간 체류</p>
                     <div className="statistical__list__progress">
                       <div className="statistical__list__progressBar" style={{ width: '17%' }}>
                         <div className="statistical__list__progressBar-style"></div>
@@ -386,7 +386,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
                       <span className="number-text">건</span>
                     </div>
                   </div>
-                  <div className="statistical__list danger">
+                  {/* <div className="statistical__list danger">
                     <p className="statistical__list__name">위험지역</p>
                     <div className="statistical__list__progress">
                       <div className="statistical__list__progressBar" style={{ width: `${testNumber}%`  }}>
@@ -399,7 +399,7 @@ const [selectedAction, setSelectedAction] = useState(null);//조치완료목록 
                       </span>
                       <span className="number-text">건</span>
                     </div>
-                  </div>
+                  </div> */}
 
 
                   {/* <div className="statistical__container-list">

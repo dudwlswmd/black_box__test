@@ -1,6 +1,10 @@
-import React, { useState , useEffect} from "react";
+import React, { useState , useRef} from "react";
 import "../styles/Warning.scss";
 import dummyImg2 from "../assets/images/dummy2.png";
+import videoFire from "../assets/video/fire.mp4";
+import fallDown from "../assets/video/fall_down.mp4";
+import header from "../assets/video/header.mp4";
+
 import videoTest from "../assets/video/videoTest4s.mp4";
 import videoTest2 from "../assets/video/videogimull.mp4";
 import videoTest3 from "../assets/video/leftOut.mp4";
@@ -10,38 +14,38 @@ import StorageModal from "../components/StorageModal";
 
 const Warning = () => {
   const [storageModal, setStorageModal] = useState(false);
-
+  const timeoutRef = useRef(null); // 셋타임 초기화
   const dummyData = [
     {
       name: "NI건설 사당 현장",
-      video:videoTest,
-      timing:6000,
-      txt:"기물파손"
+      video:videoFire,
+      timing:5000,
+      txt:"화재"
     },
     {
       name: "NI건설 강남 현장",
-      video:videoTest2,
-      timing:4000,
-      txt:"기물파손"
+      video:fallDown,
+      timing:7000,
+      txt:"쓰러짐"
     },
     {
       name: "NI건설 종로 현장",
-      video:videoTest3,
-      timing:6000,
-      txt:"쓰러짐"
+      video:header,
+      timing:5000,
+      txt:"안전모 미착용"
     },
-    {
-      name: "NI건설 중랑 현장",
-      video:videoTest4,
-      timing:8000,
-      txt:"쓰러짐"
-    },
-    {
-      name: "NI건설 송파 현장",
-      video:videoTest5,
-      timing:10000,
-      txt:"장시간 체류"
-    },
+    // {
+    //   name: "NI건설 중랑 현장",
+    //   video:videoTest4,
+    //   timing:8000,
+    //   txt:"쓰러짐"
+    // },
+    // {
+    //   name: "NI건설 송파 현장",
+    //   video:videoTest5,
+    //   timing:10000,
+    //   txt:"장시간 체류"
+    // },
   
   ];
 
@@ -61,14 +65,22 @@ const Warning = () => {
     setSensingText2(dummyData[index].name); // 선택된 아이템에 따라 텍스트 설정
     setIsConfirmButtonActive(false)//조치사항 리셋
 
-    setTimeout(() => {
+    // 이전 셋타임아웃 해제
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    const newTimeout = setTimeout(() => {
       setIsMainVideoActive(true);
 
-      // 0.5초 후에 sensing__item 생성
       setTimeout(() => {
         setIsSensingItemActive(true);
       },100);
+      console.log("순서-----------------",index)
+      console.log("순서시간-----------------",dummyData[index].timing)
+
     }, dummyData[index].timing);
+  timeoutRef.current = newTimeout;
   };
 
 
@@ -131,7 +143,7 @@ const Warning = () => {
               {selectedItemIndex !== null && (
                   <li className={`sensing__item ${isSensingItemActive ? "active" : ""}`}>
                     <span className="sensing-item__time">
-                      2022-01-22 05:14:51 ~ 2022-01-23 05:40:10
+                      2023-10-22 05:14:51 ~ 2023-10-23 05:40:10
                     </span>
                     <span className="sensing-item__text">{sensingText}</span>
                     <button className={`sensing-item__btn ${isConfirmButtonActive ? "active" : ""}`} onClick={toggleConfirmButton}>조치하기</button>
@@ -170,7 +182,7 @@ const Warning = () => {
                       <span className="safety-belt__text">{sensingText}</span>
                     </span>
                     <span className="info-left__time">
-                      2022-01-22 05:14:51 ~ 2022-01-23 05:40:10
+                      2023-09-22 05:14:51 ~ 2023-09-23 05:40:10
                     </span>
                   </div>
                   <button className={`check-video__btn ${isCheckVideoButtonActive ? "active" : ""}`} onClick={toggleCheckVideoButton}>

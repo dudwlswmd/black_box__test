@@ -9,57 +9,57 @@ import React, { useEffect, useRef, useState } from "react";
 const dummy = [
   {
     name: "NI건설 사당 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-01",
   },
   {
     name: "NI건설 강남 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-02",
   },
   {
     name: "NI건설 종로 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-03",
   },
   {
     name: "NI건설 중랑 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-04",
   },
   {
     name: "NI건설 송파 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-05",
   },
   {
     name: "NI건설 고려대 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-06",
   },
   {
     name: "NI건설 관악 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-06",
   },
   {
     name: "NI건설 홍익대 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-06",
   },
   {
     name: "NI건설 강북 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-06",
   },
   {
     name: "NI건설 서초 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-06",
   },
   {
     name: "NI건설 신촌 현장",
-    danger: { 화재: 3, "안전모 미착용": 3, 쓰러짐: 1 },
+    danger: { 기물파손: 3, "장시간 체류": 3, 쓰러짐: 1 },
     date: "2023-07-06",
   },
 ];
@@ -261,8 +261,8 @@ const Statistical = () => {
             <thead>
               <tr>
                 <th className="selection-list__type-black">{""}</th>
-                <th className="selection-list__type">화재</th>
-                <th className="selection-list__type">안전모 미착용</th>
+                <th className="selection-list__type">기물파손</th>
+                <th className="selection-list__type">장시간 체류</th>
                 <th className="selection-list__type">쓰러짐</th>
               </tr>
             </thead>
@@ -271,10 +271,10 @@ const Statistical = () => {
                 <tr key={site.name}>
                   <th className="selection-list__type-black">{site.name}</th>
                   <th className="selection-list__type">
-                    {site.danger["화재"]}
+                    {site.danger["기물파손"]}
                   </th>
                   <th className="selection-list__type">
-                    {site.danger["안전모 미착용"]}
+                    {site.danger["장시간 체류"]}
                   </th>
                   <th className="selection-list__type">
                     {site.danger["쓰러짐"]}

@@ -33,7 +33,7 @@
         }
         svg{
           path{
-            color:#121212;
+            color:#1e1e1e;
           }
           font-size: 25px;
           transition: 0.2s;
@@ -145,8 +145,10 @@
           font-family: "spoqaHanSansNeo400";
         }
         .pagination__button-active {
-          color: white;
+          color: #1e1e1e;
           background: #6be2be;
+          border: 0;
+          font-weight: bold;
         }
       }
     }

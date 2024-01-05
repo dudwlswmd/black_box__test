@@ -105,6 +105,7 @@
               // align-items: center;
               height: 65px;
               button {
+                margin:0 auto;
                 width: 122px;
                 height: 47px;
                 display: flex;
@@ -182,9 +183,9 @@
             border: 2px solid #6be2be;
           }
           &.pagination__button-active{
-            color: white;
+            color: #1e1e1e;
             background: #6be2be;
-            border: 1px solid #fff;
+            border: 0px;
           }
         }
       }
